@@ -1,4 +1,6 @@
 // Simple className merge helper
-export function cn(...args: any[]) {
+type ClassValue = string | number | false | null | undefined
+
+export function cn(...args: ClassValue[]): string {
   return args.filter(Boolean).join(' ')
 }
